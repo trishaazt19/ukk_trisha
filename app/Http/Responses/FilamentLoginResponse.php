@@ -1,0 +1,21 @@
+<?php
+
+namespace App\Http\Responses;
+
+use Filament\Auth\Http\Responses\Contracts\LoginResponse as LoginResponseContract;
+use Illuminate\Http\RedirectResponse;
+use Livewire\Features\SupportRedirects\Redirector;
+
+class FilamentLoginResponse implements LoginResponseContract
+{
+    public function toResponse($request): RedirectResponse | Redirector
+    {
+        $user = auth()->user();
+
+        if ($user?->isAdmin()) {
+            return redirect()->intended(url('/admin'));
+        }
+
+        return redirect()->route('filament.admin.resources.books.index');
+    }
+}

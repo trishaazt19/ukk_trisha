@@ -1,0 +1,35 @@
+@import '../../../../vendor/filament/filament/resources/css/theme.css';
+
+@source '../../../../app/Filament/Admin/**/*';
+@source '../../../../resources/views/filament/admin/**/*';
+
+/* Efek Kartun / Neo-Brutalism */
+.fi-ta-ctn,
+.fi-wi-stats-overview-stat,
+.fi-section,
+.fi-fo-wizard,
+.fi-modal-window {
+    border: 3px solid #1a1a1a !important;
+    box-shadow: 4px 4px 0px #1a1a1a !important;
+    border-radius: 12px !important;
+    transition: all 0.2s ease-in-out;
+}
+
+.fi-input-wrp {
+    border: 2px solid #1a1a1a !important;
+    box-shadow: 2px 2px 0px #1a1a1a !important;
+    border-radius: 8px !important;
+}
+
+.fi-btn {
+    border: 2px solid #1a1a1a !important;
+    box-shadow: 3px 3px 0px #1a1a1a !important;
+    border-radius: 8px !important;
+    text-transform: uppercase !important;
+    font-weight: 700 !important;
+}
+
+.fi-btn:active {
+    box-shadow: 0px 0px 0px #1a1a1a !important;
+    transform: translate(3px, 3px) !important;
+}
